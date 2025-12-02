@@ -1,0 +1,63 @@
+body {
+    background-color: #cccccc; /* Сірий фон, як на макеті */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    background-color: white;
+    margin: 0 auto; /* Центрування контейнера */
+    padding: 20px; /* Відступи всередині білого аркуша */
+    box-sizing: border-box; /* Щоб padding не ламав ширину */
+}
+
+.box {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;             /* Тільки для центрування тексту всередині блоку */
+    align-items: center;       /* Вертикальне центрування тексту */
+    justify-content: center;   /* Горизонтальне центрування тексту */
+    box-sizing: border-box;    /* Важливо для відсоткової ширини */
+}
+
+/* --- Логіка Float --- */
+
+/* Блоки 1 і 2 стають в один ряд */
+.block-1 {
+    width: 50%;
+    height: 200px;
+    background-color: #8c9eff; /* Бузковий */
+    float: left;
+}
+
+.block-2 {
+    width: 50%;
+    height: 200px;
+    background-color: #1faecf; /* Темно-блакитний */
+    float: left;
+}
+
+/* Блок 3 "очищує" обтікання, щоб не налізти на верхні */
+.block-3 {
+    width: 100%;
+    height: 150px;
+    background-color: #aae3f5; /* Світло-блакитний */
+    clear: both; /* Обов'язково для Float верстки */
+}
+
+.block-4 {
+    width: 100%;
+    height: 200px;
+    background-color: #1a9cb7; /* Середній блакитний */
+    clear: both;
+}
+
+/* Хак clearfix для контейнера, щоб він не "схлопнувся" по висоті */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
