@@ -1,0 +1,122 @@
+/* --- Загальні стилі --- */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* --- ЗАВДАННЯ 1: ТАБЛИЦЯ --- */
+table {
+    border-collapse: collapse; /* Прибирає подвійні рамки */
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+td {
+    border: 2px solid #333;
+    padding: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Плавна зміна кольору */
+}
+
+/* Варіант 2: nn = 02
+   Колір 1: #028f8f (Темно-бірюзовий) -> Текст білий
+   Колір 2: #f5f502 (Жовтий) -> Текст чорний
+*/
+
+/* Стилі для 1-ї частини таблиці */
+.row-type-1 td {
+    background-color: #028f8f;
+    color: white; 
+}
+
+/* Стилі для 2-ї частини таблиці (нижній рядок) */
+.row-type-2 td {
+    background-color: #f5f502;
+    color: black;
+}
+
+/* --- HOVER ЕФЕКТ (Інверсія кольорів) --- */
+
+/* Коли наводимо на таблицю, рядки типу 1 стають жовтими */
+table:hover .row-type-1 td {
+    background-color: #f5f502;
+    color: black;
+}
+
+/* Коли наводимо на таблицю, рядки типу 2 стають бірюзовими */
+table:hover .row-type-2 td {
+    background-color: #028f8f;
+    color: white;
+}
+
+
+/* --- ЗАВДАННЯ 2: ФІГУРИ (ЧЕРВОНИЙ ХРЕСТ) --- */
+
+.shapes-container {
+    display: flex;
+    gap: 50px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative; /* Батьківський елемент для позиціонування */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.red-box {
+    background-color: #D52B1E; /* Червоний колір прапора */
+}
+
+/* Загальні розміри ліній хреста */
+.cross-v-pos, .cross-h-pos, 
+.cross-v-trans, .cross-h-trans {
+    background-color: white;
+    position: absolute;
+}
+
+/* --- МЕТОД 1: POSITION (top/left + margin) --- */
+
+/* Вертикальна смуга */
+.cross-v-pos {
+    width: 40px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    /* Зсуваємо назад на половину ширини/висоти елемента */
+    margin-top: -70px;  /* 140 / 2 */
+    margin-left: -20px; /* 40 / 2 */
+}
+
+/* Горизонтальна смуга */
+.cross-h-pos {
+    width: 140px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -70px;
+}
+
+/* --- МЕТОД 2: TRANSFORM (translate) --- */
+
+/* Вертикальна смуга */
+.cross-v-trans {
+    width: 40px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    /* Центрування за допомогою трансформації */
+    transform: translate(-50%, -50%);
+}
+
+/* Горизонтальна смуга */
+.cross-h-trans {
+    width: 140px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
