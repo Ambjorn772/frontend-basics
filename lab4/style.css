@@ -1,0 +1,19 @@
+/* style.css */
+
+/* Клас, який додає JavaScript при кліку */
+.highlighted {
+    background-color: #028f8f; /* Ваш колір для Варіанта 2 (бірюзовий) */
+    color: white;              /* Колір тексту (щоб було контрастно) */
+    transition: 0.3s;          /* Плавна зміна кольору */
+}
+
+/* Трохи краси для кнопок (не обов'язково, але бажано) */
+.buttons-container {
+    margin-top: 20px;
+}
+
+button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
