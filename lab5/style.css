@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.task-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Стилі для форми */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Клас помилки (червона рамка) */
+input.error {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Стилі для таблиці */
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.hint {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #555;
+}

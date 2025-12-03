@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="task-container">
+        <h2>Завдання 1. Валідація форми (Варіант 7)</h2>
+        <form id="userForm">
+            <label>ПІБ (Приклад: Петров П.П.):
+                <input type="text" id="fullname" placeholder="Українець І.І.">
+            </label>
+
+            <label>Варіант (2 цифри):
+                <input type="text" id="variant" placeholder="22">
+            </label>
+
+            <label>Телефон (Приклад: (099)-123-45-67):
+                <input type="text" id="phone" placeholder="(099)-123-45-67">
+            </label>
+
+            <label>Факультет (4 літери):
+                <input type="text" id="faculty" placeholder="ФІОТ">
+            </label>
+
+            <label>Адреса (Приклад: м. Київ):
+                <input type="text" id="address" placeholder="м. Київ">
+            </label>
+
+            <button type="submit">Підтвердити</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <hr>
+
+    <div class="task-container">
+        <h2>Завдання 2. Інтерактивна таблиця (Варіант 2)</h2>
+        <div class="controls">
+    <label>Оберіть колір для кліку: <input type="color" id="colorPicker" value="#0000ff"></label>
+    <button id="resetBtn" style="margin-left: 15px; background-color: #dc3545;">Очистити таблицю</button>
+</div>
+        <table id="myTable">
+            </table>
+        <p class="hint">
+            <strong>Інструкція для клітинки №2:</strong><br>
+            1. Наведення (Hover) -> Випадковий колір.<br>
+            2. Клік (Click) -> Колір з палітри.<br>
+            3. Подвійний клік (DblClick) -> Фарбує весь стовпець (Варіант 2).
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
