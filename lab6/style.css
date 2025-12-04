@@ -1,0 +1,69 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.controls {
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #4CAF50; /* Зелений */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Контейнер для карток (Grid) */
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стиль однієї картки */
+.user-card {
+    background-color: #2c3e50; /* Темний фон як на скріншоті */
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.user-info {
+    padding: 15px;
+}
+
+.user-info p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.user-info strong {
+    color: #a8d5e5; /* Світло-блакитний для заголовків полів */
+}
